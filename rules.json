@@ -1,0 +1,6 @@
+[{
+    "id": 1,
+    "priority": 1,
+    "action": { "type": "redirect", "redirect": { "transform": {"queryTransform": {"addOrReplaceParams" : [{"key": "tag", "value":"GGD433FDFD" }] }}}},
+    "condition": { "urlFilter": "amazon.co.uk/*", "resourceTypes": ["main_frame"] }
+}]

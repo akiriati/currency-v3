@@ -1,0 +1,50 @@
+{
+  "version": "0.0.1",
+  "name": "Currency converter",
+  "manifest_version": 3,
+  "icons": {
+    "16": "img/dollar-symbol16.png",
+    "24": "img/dollar-symbol24.png",
+    "32": "img/dollar-symbol32.png",
+    "64": "img/dollar-symbol64.png"
+  },
+
+
+  "permissions": [
+                  "tabs",
+                  "activeTab",
+                  "storage",
+                  "declarativeNetRequest"
+                  ],
+  
+  "host_permissions": [
+    "*://*/*",
+    "<all_urls>"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "declarative_net_request" : {
+    "rule_resources" : [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  }
+
+
+
+}
